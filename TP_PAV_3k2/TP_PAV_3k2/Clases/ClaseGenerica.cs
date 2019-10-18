@@ -8,5 +8,6 @@ namespace TP_PAV_3k2.Clases
 {
     class ClaseGenerica
     {
+
     }
 }

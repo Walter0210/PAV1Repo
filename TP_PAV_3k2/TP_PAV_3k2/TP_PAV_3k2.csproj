@@ -47,290 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClaseGenerica.cs" />
-    <Compile Include="Clases\Empleado.cs" />
-    <Compile Include="Clases\Estacion.cs" />
-    <Compile Include="Clases\Estadoss.cs" />
-    <Compile Include="Clases\Productoo.cs" />
-    <Compile Include="Clases\Surtidorr.cs" />
-    <Compile Include="Clases\TipoDocumento.cs" />
-    <Compile Include="Formularios\Empleados\AgregarEmpleado.cs">
+    <Compile Include="Formularios\Parcial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Empleados\AgregarEmpleado.Designer.cs">
-      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Empleados\ModificarEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Empleados\ModificarEmpleado.Designer.cs">
-      <DependentUpon>ModificarEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Estaciones\ModificarEstaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Estaciones\ModificarEstaciones.Designer.cs">
-      <DependentUpon>ModificarEstaciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Producto\ABMProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Producto\ABMProductos.Designer.cs">
-      <DependentUpon>ABMProductos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Producto\ActualizarStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Producto\ActualizarStock.Designer.cs">
-      <DependentUpon>ActualizarStock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Producto\AltaProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Producto\AltaProductos.Designer.cs">
-      <DependentUpon>AltaProductos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Producto\ModificarProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Producto\ModificarProducto.Designer.cs">
-      <DependentUpon>ModificarProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Soporte\Estados\ABMEstados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\Estados\ABMEstados.Designer.cs">
-      <DependentUpon>ABMEstados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Soporte\Estados\AltaEstado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\Estados\AltaEstado.Designer.cs">
-      <DependentUpon>AltaEstado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Soporte\Estados\ModificarEstados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\Estados\ModificarEstados.Designer.cs">
-      <DependentUpon>ModificarEstados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoCombustible\ABMTipoCombustible.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoCombustible\ABMTipoCombustible.Designer.cs">
-      <DependentUpon>ABMTipoCombustible.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoDocumentos\AltaTipoDocumento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoDocumentos\AltaTipoDocumento.Designer.cs">
-      <DependentUpon>AltaTipoDocumento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoDocumentos\ModificarTipoDocumento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoDocumentos\ModificarTipoDocumento.Designer.cs">
-      <DependentUpon>ModificarTipoDocumento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoDocumentos\TipoDocumento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoDocumentos\TipoDocumento.Designer.cs">
-      <DependentUpon>TipoDocumento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Soporte\UnidfadMedida\ABMUnidadMedida.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\UnidfadMedida\ABMUnidadMedida.Designer.cs">
-      <DependentUpon>ABMUnidadMedida.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoUrgencia\ABMUrgencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoUrgencia\ABMUrgencia.Designer.cs">
-      <DependentUpon>ABMUrgencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Surtidor\ABMSurtidores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Surtidor\ABMSurtidores.Designer.cs">
-      <DependentUpon>ABMSurtidores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Surtidor\AltaSurtidor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Surtidor\AltaSurtidor.Designer.cs">
-      <DependentUpon>AltaSurtidor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Surtidor\ModificarSurtidor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Surtidor\ModificarSurtidor.Designer.cs">
-      <DependentUpon>ModificarSurtidor.cs</DependentUpon>
+    <Compile Include="Formularios\Parcial.Designer.cs">
+      <DependentUpon>Parcial.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\AccesoDB.cs" />
-    <Compile Include="Formularios\Soporte\TipoCombustible\ModificarTipoCombustible.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoCombustible\ModificarTipoCombustible.Designer.cs">
-      <DependentUpon>ModificarTipoCombustible.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Soporte\UnidfadMedida\ModificarUnidadMedida.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\UnidfadMedida\ModificarUnidadMedida.Designer.cs">
-      <DependentUpon>ModificarUnidadMedida.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoUrgencia\ModificarUrgencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoUrgencia\ModificarUrgencia.Designer.cs">
-      <DependentUpon>ModificarUrgencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Repositorios\RepositorioEmpleado.cs" />
-    <Compile Include="Repositorios\RepositorioEstados.cs" />
-    <Compile Include="Repositorios\RepositorioEstacion.cs" />
-    <Compile Include="Repositorios\RepositorioProductos.cs" />
-    <Compile Include="Repositorios\RepositorioSurtidor.cs" />
-    <Compile Include="Repositorios\RepositorioTiposDoc.cs" />
-    <Compile Include="Repositorios\RepositorioUnidadDeMedida.cs" />
-    <Compile Include="Repositorios\RepositorioUrgencia.cs" />
-    <Compile Include="Repositorios\RepositorioTipoCombustible.cs" />
-    <Compile Include="Clases\TipoCombustible.cs" />
-    <Compile Include="Clases\UnidadDeMedida.cs" />
-    <Compile Include="Clases\Urgencia.cs" />
-    <Compile Include="Formularios\Soporte\UnidfadMedida\AltaUnidadDeMedida.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\UnidfadMedida\AltaUnidadDeMedida.Designer.cs">
-      <DependentUpon>AltaUnidadDeMedida.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoUrgencia\AltaUrgencia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoUrgencia\AltaUrgencia.Designer.cs">
-      <DependentUpon>AltaUrgencia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoCombustible\AltaTipoCombustible.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Soporte\TipoCombustible\AltaTipoCombustible.Designer.cs">
-      <DependentUpon>AltaTipoCombustible.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Empleados\FormularioABMEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Empleados\FormularioABMEmpleado.Designer.cs">
-      <DependentUpon>FormularioABMEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Estaciones\FormularioABMSEstaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Estaciones\FormularioABMSEstaciones.Designer.cs">
-      <DependentUpon>FormularioABMSEstaciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Estaciones\FormularioAgregarEstacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Estaciones\FormularioAgregarEstacion.Designer.cs">
-      <DependentUpon>FormularioAgregarEstacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\FormularioPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FormularioPrincipal.Designer.cs">
-      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PantallaLogIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PantallaLogIn.Designer.cs">
-      <DependentUpon>PantallaLogIn.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\Empleados\AgregarEmpleado.resx">
-      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Empleados\ModificarEmpleado.resx">
-      <DependentUpon>ModificarEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Estaciones\ModificarEstaciones.resx">
-      <DependentUpon>ModificarEstaciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Producto\ABMProductos.resx">
-      <DependentUpon>ABMProductos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Producto\ActualizarStock.resx">
-      <DependentUpon>ActualizarStock.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Producto\AltaProductos.resx">
-      <DependentUpon>AltaProductos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Producto\ModificarProducto.resx">
-      <DependentUpon>ModificarProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\Estados\ABMEstados.resx">
-      <DependentUpon>ABMEstados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\Estados\AltaEstado.resx">
-      <DependentUpon>AltaEstado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\Estados\ModificarEstados.resx">
-      <DependentUpon>ModificarEstados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\TipoCombustible\ABMTipoCombustible.resx">
-      <DependentUpon>ABMTipoCombustible.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\TipoDocumentos\AltaTipoDocumento.resx">
-      <DependentUpon>AltaTipoDocumento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\TipoDocumentos\ModificarTipoDocumento.resx">
-      <DependentUpon>ModificarTipoDocumento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\TipoDocumentos\TipoDocumento.resx">
-      <DependentUpon>TipoDocumento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\UnidfadMedida\ABMUnidadMedida.resx">
-      <DependentUpon>ABMUnidadMedida.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\TipoUrgencia\ABMUrgencia.resx">
-      <DependentUpon>ABMUrgencia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\TipoCombustible\AltaTipoCombustible.resx">
-      <DependentUpon>AltaTipoCombustible.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Empleados\FormularioABMEmpleado.resx">
-      <DependentUpon>FormularioABMEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Estaciones\FormularioABMSEstaciones.resx">
-      <DependentUpon>FormularioABMSEstaciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Estaciones\FormularioAgregarEstacion.resx">
-      <DependentUpon>FormularioAgregarEstacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormularioPrincipal.resx">
-      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\TipoCombustible\ModificarTipoCombustible.resx">
-      <DependentUpon>ModificarTipoCombustible.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\UnidfadMedida\ModificarUnidadMedida.resx">
-      <DependentUpon>ModificarUnidadMedida.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\TipoUrgencia\ModificarUrgencia.resx">
-      <DependentUpon>ModificarUrgencia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Surtidor\ABMSurtidores.resx">
-      <DependentUpon>ABMSurtidores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Surtidor\AltaSurtidor.resx">
-      <DependentUpon>AltaSurtidor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Surtidor\ModificarSurtidor.resx">
-      <DependentUpon>ModificarSurtidor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PantallaLogIn.resx">
-      <DependentUpon>PantallaLogIn.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Parcial.resx">
+      <DependentUpon>Parcial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -341,12 +68,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Formularios\Soporte\UnidfadMedida\AltaUnidadDeMedida.resx">
-      <DependentUpon>AltaUnidadDeMedida.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Soporte\TipoUrgencia\AltaUrgencia.resx">
-      <DependentUpon>AltaUrgencia.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -361,10 +82,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Formularios\DetalleOrdenCompra\" />
-    <Folder Include="Formularios\detalleTicket\" />
-    <Folder Include="Formularios\OrdenDeCompra\" />
-    <Folder Include="Formularios\Tickets\" />
+    <Folder Include="Repositorios\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

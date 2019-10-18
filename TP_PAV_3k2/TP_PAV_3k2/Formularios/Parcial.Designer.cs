@@ -33,7 +33,7 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtFacturaNro = new System.Windows.Forms.TextBox();
             this.txtMonto = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPagos = new System.Windows.Forms.DataGridView();
             this.btnAgregarLista = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
@@ -45,7 +45,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.idCurso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idalumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nroFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +91,7 @@
             this.txtFacturaNro.Name = "txtFacturaNro";
             this.txtFacturaNro.Size = new System.Drawing.Size(100, 20);
             this.txtFacturaNro.TabIndex = 3;
+            this.txtFacturaNro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFacturaNro_KeyUp);
             // 
             // txtMonto
             // 
@@ -90,14 +99,24 @@
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(100, 20);
             this.txtMonto.TabIndex = 4;
+            this.txtMonto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtMonto_KeyUp);
             // 
-            // dataGridView1
+            // dgvPagos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 219);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(548, 202);
-            this.dataGridView1.TabIndex = 5;
+            this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPagos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idCurso,
+            this.idalumno,
+            this.curso,
+            this.apellido,
+            this.nombre,
+            this.nroFactura,
+            this.fecha,
+            this.importe});
+            this.dgvPagos.Location = new System.Drawing.Point(19, 219);
+            this.dgvPagos.Name = "dgvPagos";
+            this.dgvPagos.Size = new System.Drawing.Size(642, 202);
+            this.dgvPagos.TabIndex = 5;
             // 
             // btnAgregarLista
             // 
@@ -107,6 +126,7 @@
             this.btnAgregarLista.TabIndex = 6;
             this.btnAgregarLista.Text = "Agregar a lista";
             this.btnAgregarLista.UseVisualStyleBackColor = true;
+            this.btnAgregarLista.Click += new System.EventHandler(this.btnAgregarLista_Click);
             // 
             // btnNuevo
             // 
@@ -116,6 +136,7 @@
             this.btnNuevo.TabIndex = 7;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGrabar
             // 
@@ -204,12 +225,57 @@
             this.panel1.Controls.Add(this.txtFacturaNro);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtMonto);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvPagos);
             this.panel1.Controls.Add(this.btnAgregarLista);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(666, 426);
             this.panel1.TabIndex = 16;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // idCurso
+            // 
+            this.idCurso.HeaderText = "idCurso";
+            this.idCurso.Name = "idCurso";
+            this.idCurso.ReadOnly = true;
+            this.idCurso.Visible = false;
+            // 
+            // idalumno
+            // 
+            this.idalumno.HeaderText = "idAlumno";
+            this.idalumno.Name = "idalumno";
+            this.idalumno.ReadOnly = true;
+            this.idalumno.Visible = false;
+            // 
+            // curso
+            // 
+            this.curso.HeaderText = "Curso";
+            this.curso.Name = "curso";
+            // 
+            // apellido
+            // 
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // nroFactura
+            // 
+            this.nroFactura.HeaderText = "Nro. de factura";
+            this.nroFactura.Name = "nroFactura";
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            // 
+            // importe
+            // 
+            this.importe.HeaderText = "Importe";
+            this.importe.Name = "importe";
             // 
             // Parcial
             // 
@@ -223,7 +289,7 @@
             this.Name = "Parcial";
             this.Text = "Parcial";
             this.Load += new System.EventHandler(this.Parcial_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -237,7 +303,7 @@
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.TextBox txtFacturaNro;
         private System.Windows.Forms.TextBox txtMonto;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPagos;
         private System.Windows.Forms.Button btnAgregarLista;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnGrabar;
@@ -249,5 +315,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCurso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idalumno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn curso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nroFactura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn importe;
     }
 }

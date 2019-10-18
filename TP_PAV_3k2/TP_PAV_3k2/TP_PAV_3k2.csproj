@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Clases\ClaseGenerica.cs" />
     <Compile Include="Clases\Alumno.cs" />
+    <Compile Include="Clases\Pagos.cs" />
     <Compile Include="Formularios\Parcial.cs">
       <SubType>Form</SubType>
     </Compile>

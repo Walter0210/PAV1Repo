@@ -36,6 +36,7 @@ namespace TP_PAV_3k2.Formularios
 
         private void Parcial_Load(object sender, EventArgs e)
         {
+            dtpFecha.MaxDate = DateTime.Today;
             DataTable Cursos; 
             Cursos = repositorioCursos.ObtenerCursos();
             
@@ -91,6 +92,131 @@ namespace TP_PAV_3k2.Formularios
         private void cmbCurso_SelectionChangeCommitted(object sender, EventArgs e)
         {
             cargarAlumnos();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            cmbCurso.SelectedIndex = 0;
+            txtFacturaNro.Text = "";
+            txtMonto.Text = "";
+            cargarAlumnos();
+            txtFacturaNro.Focus();
+
+        }
+
+        private void txtFacturaNro_KeyUp(object sender, KeyEventArgs e)
+        {
+            double defaul;
+            if (double.TryParse(txtFacturaNro.Text, out defaul))
+            {
+                txtFacturaNro.Text = txtFacturaNro.Text;
+            }
+            else
+            {
+                txtFacturaNro.Text = "";
+                txtFacturaNro.Focus();
+                return;
+            }
+        }
+
+        private void txtMonto_KeyUp(object sender, KeyEventArgs e)
+        {
+            double defaul;
+            if (double.TryParse(txtMonto.Text, out defaul))
+            {
+                if(double.Parse(txtMonto.Text)<=0)
+                {
+                    txtMonto.Text = "";
+                    txtMonto.Focus();
+                    return;
+                }
+                txtMonto.Text = txtMonto.Text;
+            }
+            else
+            {
+                txtMonto.Text = "";
+                txtMonto.Focus();
+                return;
+            }
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        
+        private void btnAgregarLista_Click(object sender, EventArgs e)
+        {
+            string nombre;
+            string apellido;
+            if (txtFacturaNro.Text == "")
+            {
+                MessageBox.Show("ingrese factura");
+                txtFacturaNro.Focus();
+                return;
+            }
+
+            if(txtMonto.Text=="")
+            {
+                MessageBox.Show("ingrese monto");
+                txtMonto.Focus();
+                return;
+            }
+            var alumnoNombre = repositorioAlumnos.getNombre(cmbAlumno.SelectedValue.ToString()).Rows;
+            var alumnoApellido = repositorioAlumnos.getApellido(cmbAlumno.SelectedValue.ToString()).Rows;
+
+            foreach (DataRow registro in alumnoNombre)
+            {
+                if (registro.HasErrors)
+                    continue; // no corto el ciclo
+                nombre = registro.ItemArray[0].ToString();       
+                
+
+                
+            }
+            foreach (DataRow registro in alumnoApellido)
+            {
+                if (registro.HasErrors)
+                    continue; // no corto el ciclo
+                apellido = registro.ItemArray[0].ToString();
+
+
+
+            }
+            var alumnos = repositorioAlumnos.ObtenerAlumnosconidCurso(cmbCurso.SelectedValue.ToString());
+            var fila = new string[]
+            {
+                cmbCurso.SelectedValue.ToString(),
+                cmbAlumno.SelectedValue.ToString(),
+                cmbCurso.Text,
+                nombre,
+                apellido,
+
+                
+
+            };
+            dgvPagos.Rows.Clear();
+            DataTable pagos;
+            //var TiposCombustible = _repositorioTipoCombustible.ObtenerTiposCombustible().Rows;
+            ActualizarGrilla(pagos);
+
+        }
+        private void ActualizarGrilla(DataRowCollection registros)
+        {
+            foreach (DataRow registro in registros)
+            {
+                if (registro.HasErrors)
+                    continue; // no corto el ciclo
+                var fila = new string[] {
+                    registro.ItemArray[0].ToString(), // Codigo
+                    registro.ItemArray[1].ToString(), // Nombre
+                    
+                };
+
+                dgvPagos.Rows.Add(fila);
+            }
         }
     }
 }

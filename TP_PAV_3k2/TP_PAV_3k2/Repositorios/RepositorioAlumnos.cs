@@ -16,7 +16,22 @@ namespace TP_PAV_3k2.Repositorios
         {
             _BD = new accesoBD();
         }
+        public DataTable getNombre(string idAlumno)
+        {
+            string sqltxt = $"SELECT NOMBRE FROM ALUMNOS WHERE=ID='{idAlumno}'";
 
+            return _BD.consulta(sqltxt);
+        }
+        public string getApellido(string idAlumno)
+        {
+            string sqltxt = $"SELECT APELLIDO FROM ALUMNOS WHERE=ID='{idAlumno}'";
+
+            var tmp=_BD.consulta(sqltxt);
+            string apellido = "";
+
+            return apellido;
+
+        }
         /*public DataTable ObtenerAlumnos()
         {
             //se define una variable local a la función <sqltxt> del tipo <string> donde en el 

@@ -56,6 +56,11 @@
             this.cmbCurso.Name = "cmbCurso";
             this.cmbCurso.Size = new System.Drawing.Size(612, 21);
             this.cmbCurso.TabIndex = 0;
+            this.cmbCurso.SelectedIndexChanged += new System.EventHandler(this.cmbCurso_SelectedIndexChanged);
+            this.cmbCurso.SelectionChangeCommitted += new System.EventHandler(this.cmbCurso_SelectionChangeCommitted);
+            this.cmbCurso.SelectedValueChanged += new System.EventHandler(this.cmbCurso_SelectedValueChanged);
+            this.cmbCurso.TextChanged += new System.EventHandler(this.cmbCurso_TextChanged);
+            this.cmbCurso.MouseUp += new System.Windows.Forms.MouseEventHandler(this.cmbCurso_MouseUp);
             // 
             // cmbAlumno
             // 
@@ -129,6 +134,7 @@
             this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // label1
             // 
@@ -216,6 +222,7 @@
             this.Controls.Add(this.btnNuevo);
             this.Name = "Parcial";
             this.Text = "Parcial";
+            this.Load += new System.EventHandler(this.Parcial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
